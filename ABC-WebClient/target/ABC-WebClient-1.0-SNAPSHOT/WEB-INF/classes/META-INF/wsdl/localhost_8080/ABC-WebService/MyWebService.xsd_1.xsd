@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://service.lasitha/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service.lasitha/">
+
+<xs:element name="addDoctor" type="tns:addDoctor"/>
+
+<xs:element name="addDoctorResponse" type="tns:addDoctorResponse"/>
+
+<xs:element name="addDrug" type="tns:addDrug"/>
+
+<xs:element name="addDrugResponse" type="tns:addDrugResponse"/>
+
+<xs:element name="addPatient" type="tns:addPatient"/>
+
+<xs:element name="addPatientResponse" type="tns:addPatientResponse"/>
+
+<xs:element name="addPayment" type="tns:addPayment"/>
+
+<xs:element name="addPaymentResponse" type="tns:addPaymentResponse"/>
+
+<xs:element name="addUser" type="tns:addUser"/>
+
+<xs:element name="addUserResponse" type="tns:addUserResponse"/>
+
+<xs:element name="deleteDoctor" type="tns:deleteDoctor"/>
+
+<xs:element name="deleteDoctorResponse" type="tns:deleteDoctorResponse"/>
+
+<xs:element name="deleteDrug" type="tns:deleteDrug"/>
+
+<xs:element name="deleteDrugResponse" type="tns:deleteDrugResponse"/>
+
+<xs:element name="deletePatient" type="tns:deletePatient"/>
+
+<xs:element name="deletePatientResponse" type="tns:deletePatientResponse"/>
+
+<xs:element name="deleteUser" type="tns:deleteUser"/>
+
+<xs:element name="deleteUserResponse" type="tns:deleteUserResponse"/>
+
+<xs:element name="getDoctor" type="tns:getDoctor"/>
+
+<xs:element name="getDoctorResponse" type="tns:getDoctorResponse"/>
+
+<xs:element name="getDoctors" type="tns:getDoctors"/>
+
+<xs:element name="getDoctorsResponse" type="tns:getDoctorsResponse"/>
+
+<xs:element name="getDrug" type="tns:getDrug"/>
+
+<xs:element name="getDrugResponse" type="tns:getDrugResponse"/>
+
+<xs:element name="getDrugs" type="tns:getDrugs"/>
+
+<xs:element name="getDrugsResponse" type="tns:getDrugsResponse"/>
+
+<xs:element name="getPatient" type="tns:getPatient"/>
+
+<xs:element name="getPatientResponse" type="tns:getPatientResponse"/>
+
+<xs:element name="getPatients" type="tns:getPatients"/>
+
+<xs:element name="getPatientsResponse" type="tns:getPatientsResponse"/>
+
+<xs:element name="getPayments" type="tns:getPayments"/>
+
+<xs:element name="getPaymentsResponse" type="tns:getPaymentsResponse"/>
+
+<xs:element name="getUser" type="tns:getUser"/>
+
+<xs:element name="getUserResponse" type="tns:getUserResponse"/>
+
+<xs:element name="getUsers" type="tns:getUsers"/>
+
+<xs:element name="getUsersResponse" type="tns:getUsersResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:complexType name="addPayment">
+<xs:sequence>
+<xs:element name="addPayment" type="tns:payment" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="payment">
+<xs:sequence>
+<xs:element name="addfee" type="xs:string" minOccurs="0"/>
+<xs:element name="drugs" type="xs:string" minOccurs="0"/>
+<xs:element name="fname" type="xs:string" minOccurs="0"/>
+<xs:element name="patientno" type="xs:string" minOccurs="0"/>
+<xs:element name="paymentid" type="xs:int"/>
+<xs:element name="tests" type="xs:string" minOccurs="0"/>
+<xs:element name="treatments" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPaymentResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUser">
+<xs:sequence>
+<xs:element name="deleteUser" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUsers">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getUsersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:user" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="user">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0"/>
+<xs:element name="bday" type="xs:string" minOccurs="0"/>
+<xs:element name="contact" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="fname" type="xs:string" minOccurs="0"/>
+<xs:element name="lname" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+<xs:element name="reg" type="xs:string" minOccurs="0"/>
+<xs:element name="userid" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPatient">
+<xs:sequence>
+<xs:element name="addPatient" type="tns:patient" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="patient">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0"/>
+<xs:element name="age" type="xs:string" minOccurs="0"/>
+<xs:element name="contact" type="xs:string" minOccurs="0"/>
+<xs:element name="fname" type="xs:string" minOccurs="0"/>
+<xs:element name="lname" type="xs:string" minOccurs="0"/>
+<xs:element name="patientid" type="xs:int"/>
+<xs:element name="ward" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPatientResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDoctor">
+<xs:sequence>
+<xs:element name="getDoctor" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDoctorResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:doctor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="doctor">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0"/>
+<xs:element name="doctorid" type="xs:int"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="fname" type="xs:string" minOccurs="0"/>
+<xs:element name="lname" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDoctors">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getDoctorsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:doctor" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPatient">
+<xs:sequence>
+<xs:element name="getPatient" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPatientResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:patient" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDrug">
+<xs:sequence>
+<xs:element name="deleteDrug" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDrugResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPayments">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getPaymentsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:payment" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDrugs">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getDrugsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:drug" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="drug">
+<xs:sequence>
+<xs:element name="dname" type="xs:string" minOccurs="0"/>
+<xs:element name="dqty" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDrug">
+<xs:sequence>
+<xs:element name="getDrug" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDrugResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:drug" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDoctor">
+<xs:sequence>
+<xs:element name="addDoctor" type="tns:doctor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDoctorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUser">
+<xs:sequence>
+<xs:element name="getUser" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPatients">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getPatientsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:patient" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addUser">
+<xs:sequence>
+<xs:element name="addUser" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDoctor">
+<xs:sequence>
+<xs:element name="deleteDoctor" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDoctorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletePatient">
+<xs:sequence>
+<xs:element name="deletePatient" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletePatientResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDrug">
+<xs:sequence>
+<xs:element name="addDrug" type="tns:drug" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDrugResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
